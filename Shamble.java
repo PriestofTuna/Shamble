@@ -1,15 +1,21 @@
 
-public class Persons {
+public class Person {
 
-	public Persons(String name, int age) {
+	
+	private String name;
+	
+	
+	
+	public Person(String name, int age) {
 		this.setName(name);
 		this.setAge(age);
 		// TODO Auto-generated constructor stub
+		
 	}
 	
 	
 
-	private String name;
+	
 	private int age;
 
 	public String getName() {
@@ -35,22 +41,28 @@ public class Persons {
 // Everything above this comment is for the class "Persons"
 // Everything below this comment is for the class Peoples
 import java.util.Scanner;
-public class Peoples {
-
-	public Peoples() {
+public class People {
+	private static Scanner keyboard = new Scanner(System.in);
+	public People() {
 		// TODO Auto-generated constructor stub
+		
+		
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-    Scanner keyboard = new Scanner(System.in);
+    
     String personsName = keyboard.next();
-    Persons person = new Persons(personsName, 24);
-    Persons MarkPerson = new Persons("Mark", 15);
-    System.out.println(MarkPerson);
-    System.out.println(personsName);
-    System.out.println(person);
-    if (!MarkPerson.equals(personsName)){
+    Person asdf = new Person(personsName, 24);
+    Person markPerson = new Person("Mark", 15);
+    System.out.println(asdf.getName());
+    String example = "hi";
+    String another = example;
+    System.out.print(example != another);
+    
+  
+    System.out.println(asdf);
+    if (markPerson.getName().charAt(0) == (asdf.getName()).charAt(0)   ){
     System.out.print("This is not a spy with multiple identies, failure.");	
     }
 	}
